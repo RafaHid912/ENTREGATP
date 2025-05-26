@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda CARP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
+</head>
+<body>
+    <header>
+    <h1><i class="fas fa-futbol"></i> Tienda Oficial Club Atletico River Plate</h1>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#productos"><i class="fas fa-tshirt"></i> Productos</a></li>
+            <li><a href="#reseñas"><i class="fas fa-star"></i> Reseñas</a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </nav>  
+
+
+    <main>
+        <section id="inicio">
+            <h2 style="text-align: center;">Bienvenido a la Tienda de River Plate</h2>
+            <p style="text-align: center;">Explora nuestros productos oficiales.</p>
+            <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XcOQeyRK3_M" 
+            frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="productos">
+            <h2>Productos</h2>
+            <div class="productos-container">
+                <div class="card">
+                    <img src=".\assets\camisetaBlanca.jpg" alt="Camiseta FC Titanes">
+                    <h3>Camiseta Oficial</h3>
+                    <p>$150.000</p>
+                </div>
+                <div class="card">
+                    <img src=".\assets\bufanda.jpg" alt="Bufanda FC Titanes">
+                    <h3>Bufanda</h3>
+                    <p>$35.000</p>
+                </div>
+                <div class="card">
+                    <img src=".\assets\camiseta.jpg" alt="Balón FC Titanes">
+                    <h3>Camiseta Oficial</h3>
+                    <p>$150.00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reseñas">
+            <h2>Reseñas de los fans</h2>
+            <div class="reseñas-grid">
+                <div class="reseña">"¡El mas grande de Argentina!" - Ana</div>
+                <div class="reseña">"Me encantó la camiseta!!!." - Luis</div>
+                <div class="reseña">"Gran variedad de productos." - Marta</div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
+            <form action="https://formspree.io/f/tu-id-formspree" method="POST">
+                <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+                <input type="email" id="email" name="_replyto" required>
+
+                <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+    <p><i class="fas fa-copyright"></i> 2025 CLUB ATLETICO RIVER PLATE</p>
+    </footer>
+    <!-- boton para subir y el script -->
+  <button id="btn-subir" title="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+  </button>
+  <script>
+   
+    const btnSubir = document.getElementById("btn-subir");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btnSubir.style.display = "block";
+        } else {
+            btnSubir.style.display = "none";
+        }
+    };
+
+    // Función para subir al inicio
+    btnSubir.onclick = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+
+  
+
+</body>
+</html>
